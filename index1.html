@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Tasks</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f3dfed, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 10px;
+    }
+
+    .container {
+      background-color: rgb(204, 107, 107);
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 550px;
+      width: 100%;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      background-color: lightblue;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      padding: 8px;
+      margin: 5px 0;
+      width: 80px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .top-right-info {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-right: 455px;
+      margin-top: 120px;
+      text-align: middle;
+      font-size: 18px;
+    }
+
+    .btn {
+      background-color: blue;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      color: blue;
+      margin: 2px 0;
+    }
+  </style>
+  <body>
+    <div class="top-right-info">
+      Name: Hariharan P K<br />
+      Reg No: 61781922102038
+    </div>
+
+    <div class="container">
+      <h3>1. <strong>Change Text</strong></h3>
+      <p id="message">Hello World!</p>
+      <button onclick="changeText()" class="btn">Submit</button>
+
+      <h3>2. <strong>House Hover</strong></h3>
+      <div id="box" class="box"></div>
+
+      <h3>3. <strong>Addition</strong></h3>
+      <input type="number" id="num1" placeholder="Enter first number" />
+      <input type="number" id="num2" placeholder="Enter second number" />
+      <button onclick="calculateSum()" class="btn">Click</button>
+      <p>Result: <span id="result">0</span></p>
+
+      <h3>4. <strong>To-Do List</strong></h3>
+      <input type="text" id="task" placeholder="Enter task" />
+      <button onclick="addTask()" class="btn">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

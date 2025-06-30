@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Preferences Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e2fde7, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: rgb(197, 57, 122);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .top-right-info {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-right: 480px;
+      margin-top: 100px;
+      text-align: middle;
+      font-size: 18px;
+    }
+    .btn {
+      background-color: purple;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: blue;
+    }
+  </style>
+  <body>
+    <div class="top-right-info">
+      Name: Hariharan P K<br />
+      Reg No: 61781922102038
+    </div>
+    <div class="container">
+      <h2>Select your interests</h2>
+      <div id="interests">
+        <input type="checkbox" name="interest" value="Sports" checked />
+        Sports<br />
+        <input type="checkbox" name="interest" value="Music" checked />
+        Music<br />
+        <input type="checkbox" name="interest" value="Reading" checked />
+        Reading<br />
+        <input type="checkbox" name="interest" value="Art" checked />
+        Art<br />
+        <input type="checkbox" name="interest" value="Coding" checked />
+        Coding<br />
+        <input type="checkbox" name="interest" value="Blogging" />
+        Blogging<br />
+        <input type="checkbox" name="interest" value="Vacation" />
+        Vacation<br />
+        <input type="checkbox" name="interest" value="Scientist" />
+        Scientist<br />
+      </div>
+
+      <h2>Select your gender</h2>
+      <input type="radio" name="gender" value="Male" checked /> Male
+      <input type="radio" name="gender" value="Female" /> Female
+      <input type="radio" name="gender" value="Other" /> Other
+
+      <h2>Select your preferred programming language</h2>
+      <select id="programmingLanguage">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="PHP">PHP</option>
+      </select>
+
+      <br /><br />
+      <button onclick="showSelections()" class="btn">
+        Show Selected Interests, Gender, and Programming Language
+      </button>
+
+      <p id="resultInterests"></p>
+      <p id="resultGender"></p>
+      <p id="resultLanguage"></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
